@@ -1,5 +1,5 @@
 # Finoramic-Tasks
-Tasks given by Finoramic - includes 3 Programming and one Python script
+Tasks given by Finoramic - one Python script
 
 1.Working Directory pointing the json file for Python needs to be changed accordingly for the script to run.
 
