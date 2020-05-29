@@ -27,6 +27,7 @@ for k in dict1:
         subprocess.check_call([sys.executable, '-m', 'pip', 'install',k+"=="+dict1[k]])
     except subprocess.CalledProcessError:
         failedPackage.append(k)
+        continue
         
 
 ##Printing Failed Packages
