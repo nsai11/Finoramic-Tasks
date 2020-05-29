@@ -1,0 +1,17 @@
+public class Solution {
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public ArrayList<ArrayList<Integer>> anagrams(final List<String> A) {
+        HashMap<String,ArrayList<Integer>> map = new HashMap<>();
+        for(int i = 0;i<A.size();i++)
+        {
+            char ch[] = A.get(i).toCharArray();
+            Arrays.sort(ch);
+            String s = String.valueOf(ch);
+            if(!map.containsKey(s))
+                map.put(s,new ArrayList<Integer>());
+            map.get(s).add(i+1);
+        }
+        ArrayList<ArrayList<Integer>> arr = new ArrayList<ArrayList<Integer>> (map.values());
+        return arr;
+    }
+}
