@@ -1,0 +1,27 @@
+public class Solution {
+    public int braces(String A) {
+        Stack<Character> stk = new Stack<Character>();
+        char ch[] = A.toCharArray();
+        for(int i = 0;i<A.length();i++)
+        {
+            if(ch[i] == ')')
+            {
+                char top = stk.peek();
+                int flag = 1;
+                stk.pop();
+                while(top!='(')
+                {
+                    if(top == '+' || top == '/' || top == '*' || top == '%' || top == '-')
+                        flag = 0;
+                    top = stk.peek();
+                    stk.pop();
+                }
+                if(flag == 1)
+                    return 1;
+            }
+            else
+                stk.push(ch[i]);
+        }
+        return 0;
+    }
+}
